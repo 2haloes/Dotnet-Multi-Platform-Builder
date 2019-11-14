@@ -6,4 +6,12 @@
     <RootNamespace>Dotnet_Multi_Platform_Builder</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Classes\Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
 </Project>
