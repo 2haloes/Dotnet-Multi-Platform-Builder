@@ -16,7 +16,7 @@ namespace Dotnet_Multi_Platform_Builder.Classes
             webClient = new HttpClient();
         }
 
-        public dynamic DownloadJsonOSList()
+        public Runtimes DownloadJsonOSList()
         {
             HttpResponseMessage response = webClient.GetAsync("https://raw.githubusercontent.com/dotnet/corefx/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json").Result;
             Console.WriteLine("Gotten response!");
@@ -31,7 +31,7 @@ namespace Dotnet_Multi_Platform_Builder.Classes
 
             Console.WriteLine("Response good!");
 
-            return JsonConvert.DeserializeObject<object>(response.Content.ReadAsStringAsync().Result);
+            return JsonConvert.DeserializeObject<Runtimes>(response.Content.ReadAsStringAsync().Result);
         }
     }
 }
